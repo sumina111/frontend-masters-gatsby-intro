@@ -11,7 +11,7 @@ const useInstagram = () => {
           localFile {
             childImageSharp {
               fluid(maxWidth: 120, maxHeight: 120) {
-                srcSet
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
