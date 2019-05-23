@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import { MDXRenderer } from 'gatsby-mdx';
 import Layout from '../components/layout';
-import Images from '../components/images';
+// import Images from '../components/images';
 import ReadLink from '../components/read-link';
 
 export const query = graphql`
@@ -46,11 +46,14 @@ const PostTemplate = ({ data: { mdx: post }, pageContext }) => {
       >
         Posted by({post.frontmatter.author})
       </p>
-      <Images
+      {/* {
+        image={}
+      } */}
+      {/* <Images
         image1={post.frontmatter.images[0]}
         image2={post.frontmatter.images[1]}
         image3={post.frontmatter.images[2]}
-      />
+      /> */}
 
       {/* {post.frontmatter.images} = {post.frontmatter.image.sharp.fluid} */}
       <MDXRenderer>{post.code.body}</MDXRenderer>

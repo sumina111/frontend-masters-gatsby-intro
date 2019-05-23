@@ -4,7 +4,12 @@ import { Link } from 'gatsby';
 
 const ContactUs = () => (
   <div>
-    <form>
+    <form
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <div>
         Name:
         <input type="text" name="name" placeholder="Name" />
