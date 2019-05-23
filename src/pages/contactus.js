@@ -6,7 +6,7 @@ const ContactUs = () => (
   <div>
     <form
       name="contact"
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
@@ -24,7 +24,7 @@ const ContactUs = () => (
       </div>
       <div>
         Message Us:
-        <textarea placeholder="Message" />
+        <textarea placeholder="Message" type="text" />
       </div>
       <button type="submit">Send</button>
     </form>
