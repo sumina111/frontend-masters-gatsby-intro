@@ -43,6 +43,12 @@ const Header = () => (
       <NavLink to="/about/" activeClassName="current-page">
         About
       </NavLink>
+      <NavLink to="/contact/" activeClassName="current-page">
+        ContactUs
+      </NavLink>
+      <NavLink to="/product" activeClassName="current-page">
+        Product
+      </NavLink>
     </nav>
   </header>
 );

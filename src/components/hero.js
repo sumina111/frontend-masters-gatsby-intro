@@ -51,9 +51,9 @@ const Hero = () => {
   return (
     <ImageBackground Tag="section" fluid={image.sharp.fluid} fadeIn="soft">
       <TextBox>
-        <h1>Frontend Masters + Gatsby &hearts;</h1>
+        <h1>Vedanasoft Pvt. Ltd. &hearts;</h1>
         <p>
-          Hello Minnesota! <Link to="/about/">Learn about me &rarr;</Link>
+          Welcome to our Site <Link to="/about/">Learn about us &rarr;</Link>
         </p>
       </TextBox>
     </ImageBackground>

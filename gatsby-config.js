@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
-        path: 'posts',
+        name: 'blog',
+        path: 'posts/blog',
       },
     },
     {
@@ -29,6 +29,13 @@ module.exports = {
       options: {
         name: 'images',
         path: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: 'posts/content',
       },
     },
     {
