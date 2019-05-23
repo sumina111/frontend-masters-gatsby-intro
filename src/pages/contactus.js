@@ -26,7 +26,7 @@ const ContactUs = () => (
         Message Us:
         <textarea placeholder="Message" />
       </div>
-      <button>Send</button>
+      <button type="submit">Send</button>
     </form>
     <Link to="/">&larr; back to home</Link>
   </div>
