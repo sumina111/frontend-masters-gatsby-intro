@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 // import Layout from '../components/layout';
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
 
 const ContactUs = () => {
   const [state, setState] = useState({
