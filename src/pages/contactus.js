@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 // import Layout from '../components/layout';
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -9,7 +10,7 @@ function encode(data) {
 
 const ContactUs = () => {
   const [state, setState] = useState({
-    isValidated: false,
+    // isValidated: false,
     name: '',
     email: '',
     phone: '',
@@ -23,16 +24,28 @@ const ContactUs = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch(error => alert(error));
+
+    // check for form validation;
+    if (state.name && state.email && state.message) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': form.getAttribute('name'),
+          ...state,
+        }),
+      })
+        .then(() => {
+          setState({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
+          alert('Form submissions success');
+        })
+        .catch(error => alert(error));
+    }
   };
 
   return (
